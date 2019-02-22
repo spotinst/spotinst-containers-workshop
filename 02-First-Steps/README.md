@@ -1,44 +1,35 @@
-# Your First Container
+# Docker command
 
-Now you will build your first image,
-then we will create from the image a container instance.
-the container will be the traditional hello world HTTP servers
+Basic training is over, from now there are no more answers for the questions
 
-## Build the image
-please follow the steps below
+In the following sections, we will run different programs in Docker containers
 
- ### the first step is to create the Docker File
-1. create a DockerFile
-2. for the base image choose python 3.7
-3. create the directory `~/my-hello-world-code`
-3. copy the directory from your pc `hello-wold-code` to the new directory in the container
-4. change the working directory in the container to `~/my-hello-world-code`
-5. run the cmd in the container `pip install -r ./requmint.txt`
-6. the entry point for the pgrogram is `python ./main.py`
+## Drupal server
+first read about [Drupal](https://www.drupal.org/)
+1. run `drupal` container with:
+    * create port mapping from container port 80 to the host port 8080
+    * name the container `drupal`
+2. go to the url [http://localhost:8080/](http://localhost:8080/)
+3. see the logs for the container
 
-### Create the Image
-1. create the image with the tag `my-hello-world`
+## MySql server
 
-## Build thhe Contianer
-1. run the contianer with the params:
-    * map the container port 2019 to 2020 in the host
-    * call the contianer my-hello-world-v1
-2. in your terminal run the commad 
-3. get the contianer logs
+we whant to run a mysql server in docker.
 
+to run server follow the following steps:
+1. run `mysql` server version `5.7` with:
+    *  port mapping of port `3306` to `3306` 
+    *  env key `MYSQL_PASSWORD` the value is the password you whant to use for log in 
+    *  name  `sql-server-1`
+    *  run the server with argument `--old-passwords=2`
 
-1. run the contianer with the params:
-    * map the container port 2019 to 2020 in the host
-    * add env ver `MY-NAME`:{you name} 
-    * call the contianer my-hello-world-v1
-2. in your terminal run the commad 
-3. get the contianer logs
+2. conncet to your new mysql server:
+    * Host:  127.0.0.1
+    * uset: root
+    * password: you password
+3. don't stop the container `sql-server-1` and run other MySQL server with name `sql-server-2`
+4. stop `sql-server-1` and `sql-server-2`
+5. remove only the image for `mysql:5.7`
 
-
-And we done,
-we have a new container from the image you build
-
-
-Notes:
-1. see how we can maplted the code by adding env ver
-2. please 
+if you stuck try to find the answer the link below.
+[link below](https://hub.docker.com/_/mysql)
