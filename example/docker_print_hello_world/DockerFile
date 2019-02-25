@@ -1,0 +1,5 @@
+FROM python
+RUN mkdir -p /hello_world
+WORKDIR /hello_world
+COPY ./main.py /hello_world
+CMD python ./main.py
