@@ -118,6 +118,6 @@ dmypy.json
 
 #VS Code
 .vscode
-./exmpale
-./static
-./templates
+code-example/
+static/
+templates/
