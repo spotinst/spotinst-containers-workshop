@@ -1,6 +1,7 @@
 # Docker workshop
-## link to Download Docker daemon [Docker daemon](https://drive.google.com/open?id=1QtB098FzEEsMpuMiFB871MS4zfultHQF)
 ![](./Spotinst.png)
+## link to Download Docker daemon [Docker daemon](https://drive.google.com/open?id=1QtB098FzEEsMpuMiFB871MS4zfultHQF)
+
 1. [Task 0 - sanity check](./00-sanity-check/README.md)
 2. [Task 1 - basic docker CMD](./01-basic-docker-CMD/README.md)
 3. [Task 2 - first steps](./02-First-Steps/README.md)
